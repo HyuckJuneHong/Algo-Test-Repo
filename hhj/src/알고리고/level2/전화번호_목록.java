@@ -1,4 +1,4 @@
-package src.programmers.알고리고.level2;
+package src.알고리고.level2;
 
 import java.util.*;
 import java.util.stream.*;

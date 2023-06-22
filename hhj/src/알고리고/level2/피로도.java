@@ -1,4 +1,4 @@
-package src.programmers.알고리고.level2;
+package src.알고리고.level2;
 
 /**
  * - 최소 필요 피로도 : 던전 탐험을 위해 있어야할 최소 피로도
