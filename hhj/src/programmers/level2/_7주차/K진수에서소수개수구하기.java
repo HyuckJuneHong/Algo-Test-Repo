@@ -37,7 +37,7 @@ public class K진수에서소수개수구하기 {
     }
 
 
-    public static boolean isPrime(long number) {
+    private static boolean isPrime(long number) {
 
         long midNumber = (long) (Math.sqrt(number) + 1);
 
@@ -54,8 +54,8 @@ public class K진수에서소수개수구하기 {
         return true;
     }
 
-    public static String toNPrime(int n,
-                                  int k) {
+    private static String toNPrime(int n,
+                                   int k) {
 
         if (n == 0) {
             return "0";
