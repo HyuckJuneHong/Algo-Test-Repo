@@ -1,6 +1,7 @@
 package src.알고리고.level2;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 class 전화번호_목록_이근우 {
     /*
@@ -14,8 +15,6 @@ class 전화번호_목록_이근우 {
         O(1_000_000 * log 1_000_000) + O(20 * 1_000_000) = O(20 * 1_000_000)
     */
     public boolean solution(String[] phone_book) {
-        Arrays.sort(phone_book);
-
         Set<String> prefixes = new HashSet<>();
         prefixes.add(phone_book[0]);
 

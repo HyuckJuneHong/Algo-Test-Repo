@@ -1,14 +1,14 @@
-package src;
+package src.알고리고.level2;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class Solution {
+public class 뒤에_있는_큰수_찾기 {
 
     // 1_000_000 * 1_000_000 -> 불가능
     // DP로 풀어보자! -> 실패.. 시간초과...
-    // Stack? -> 성공
-    public static int[] solution(int[] numbers) {
+    // Stack?
+    public int[] solution(int[] numbers) {
         Deque<Integer> index = new ArrayDeque<>();
         index.push(0);
 
@@ -26,10 +26,5 @@ public class Solution {
         }
 
         return numbers;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {9, 1, 5, 3, 6, 2};
-        solution(arr);
     }
 }
