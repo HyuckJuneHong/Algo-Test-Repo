@@ -6,48 +6,46 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 class _3차_파일명_정렬 {
-    //1_000 * 3
-    public static String[] solution(String[] files) {
-        List<File> fileList = new ArrayList<>();
+    public String[] solution(String[] files) {
+        List<File> list = new ArrayList<>();
 
-        for (String file : files) {
-            StringTokenizer st = new StringTokenizer(file, "0123456789", true);
-
-            String hb = st.nextToken();
-            StringBuilder nb = new StringBuilder();
-            StringBuilder tb = new StringBuilder();
+        for (int i = 0; i < files.length; i++) {
+            String current = files[i];
+            StringTokenizer st = new StringTokenizer(current, "0123456789", true);
+            String head = st.nextToken();
+            StringBuilder number = new StringBuilder();
+            StringBuilder tail = new StringBuilder();
 
             while (st.hasMoreTokens()) {
-                String token = st.nextToken();
+                String next = st.nextToken();
 
-                if (!Character.isDigit(token.charAt(0))) {
-                    tb.append(token);
+                if (!Character.isDigit(next.charAt(0))) {
+                    tail.append(next);
                     break;
                 }
 
-                nb.append(token);
+                number.append(next);
             }
 
             while (st.hasMoreTokens()) {
-                tb.append(st.nextToken());
+                tail.append(st.nextToken());
             }
 
-            fileList.add(new File(hb, nb.toString(), tb.toString()));
+            list.add(new File(head, number.toString(), tail.toString()));
         }
 
-        Collections.sort(fileList);
+        Collections.sort(list);
+        String[] answer = new String[list.size()];
 
-        String[] answer = new String[fileList.size()];
-
-        for (int i = 0; i < fileList.size(); i++) {
-            File file = fileList.get(i);
+        for (int i = 0; i < list.size(); i++) {
+            File file = list.get(i);
             answer[i] = file.head + file.number + file.tail;
         }
 
         return answer;
     }
 
-    static class File implements Comparable<File> {
+    public class File implements Comparable<File> {
         String head;
         String number;
         String tail;
@@ -60,19 +58,16 @@ class _3차_파일명_정렬 {
 
         @Override
         public int compareTo(File o) {
-            if (this.head.equalsIgnoreCase(o.head)) {
+            String head1 = this.head.toLowerCase();
+            String head2 = o.head.toLowerCase();
+
+            if (head1.equals(head2)) {
                 int number1 = Integer.parseInt(this.number);
                 int number2 = Integer.parseInt(o.number);
-
-                if (number1 == number2) {
-                    return 0;
-                }
-
                 return number1 - number2;
             }
 
-            return this.head.toLowerCase()
-                    .compareTo(o.head.toLowerCase());
+            return head1.compareTo(head2);
         }
     }
 }
