@@ -7,30 +7,41 @@ import java.util.Set;
 
 public class 롤_케이크_자르기 {
     public int solution(int[] topping) {
-        Map<Integer, Integer> map = new HashMap<>();
-        Set<Integer> set = new HashSet<>();
-
-        int size = topping.length;
+        Map<Integer, Integer> map = init(topping);
         int answer = 0;
 
-        for (int i = 0; i < size; i++) {
-            map.put(topping[i], map.getOrDefault(topping[i], 0) + 1);
+        answer += slideWindow(topping, map);
+
+        return answer;
+    }
+
+    private HashMap<Integer, Integer> init(int[] topping) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int t : topping) {
+            map.put(t, map.getOrDefault(t, 0) + 1);
         }
 
-        for (int i = 0; i < size; i++) {
-            int current = topping[i];
-            set.add(current);
-            map.put(current, map.get(current) - 1);
+        return map;
+    }
 
-            if (map.get(current) == 0) {
-                map.remove(current);
+    private int slideWindow(int[] topping, Map<Integer, Integer> map) {
+        Set<Integer> set = new HashSet<>();
+        int count = 0;
+
+        for (int t : topping) {
+            set.add(t);
+            map.put(t, map.get(t) - 1);
+
+            if (map.get(t) == 0) {
+                map.remove(t);
             }
 
             if (set.size() == map.size()) {
-                answer++;
+                count++;
             }
         }
 
-        return answer;
+        return count;
     }
 }

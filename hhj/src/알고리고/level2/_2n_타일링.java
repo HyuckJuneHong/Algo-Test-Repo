@@ -1,23 +1,28 @@
 package src.알고리고.level2;
 
 public class _2n_타일링 {
+    static int[] answer;
+
     public int solution(int n) {
-        int[] answer = new int[60_001];
-        answer[0] = 1;
-        answer[1] = 1;
+        answer = new int[60_001];
 
         for (int i = 0; i <= n; i++) {
-            answer[i] = dfs(n, i, answer);
+            fibo(n, i);
         }
 
         return answer[n];
     }
 
-    private int dfs(int n, int depth, int[] answer) {
-        if (answer[depth] != 0) {
-            return answer[depth];
+    public void fibo(int n, int depth) {
+        if (depth < 2) {
+            answer[depth] = 1;
+            return;
         }
 
-        return answer[depth] = (dfs(n, depth - 1, answer) + dfs(n, depth - 2, answer)) % 1_000_000_007;
+        if (answer[depth] != 0) {
+            return;
+        }
+
+        answer[depth] = (answer[depth - 1] + answer[depth - 2]) % 1_000_000_007;
     }
 }
