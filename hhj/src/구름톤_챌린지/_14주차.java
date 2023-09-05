@@ -21,11 +21,11 @@ public class _14주차 {
 			graph[a][b] = graph[b][a] = 1;
 		}
 
-		int[] answer = bfs(N, M, K, graph);
+		int[] answer = bfs(N, K, graph);
 		System.out.print(answer[0] + " " + answer[1]);
 	}
 
-	private static int[] bfs(int N, int M, int K, int[][] graph) {
+	private static int[] bfs(int N, int K, int[][] graph) {
 		Deque<Integer> q = new ArrayDeque<>();
 		boolean[] visited = new boolean[N + 1];
 		int count = 1;
