@@ -25,18 +25,18 @@ import java.io.InputStreamReader;
  */
 public class _18주차 {
 
-	static int[][] h;
-	static int[][] v;
+	static long[][] h;
+	static long[][] v;
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String[] input = br.readLine().split(" ");
 		int N = Integer.parseInt(input[0]);
-		int M = Integer.parseInt(input[1]);
-		h = new int[N][N];
-		v = new int[N][N];
+		long M = Long.parseLong(input[1]);
+		h = new long[N][N];
+		v = new long[N][N];
 
-		for (int i = 0; i < M; i++) {
+		for (long i = 0; i < M; i++) {
 			input = br.readLine().split(" ");
 			int y = Integer.parseInt(input[0]) - 1;
 			int x = Integer.parseInt(input[1]) - 1;
@@ -44,12 +44,12 @@ public class _18주차 {
 			drawLine(N, y, x, d);
 		}
 
-		int answer = count(N);
+		long answer = count(N);
 		System.out.print(answer);
 	}
 
-	private static int count(int N) {
-		int count = 0;
+	private static long count(int N) {
+		long count = 0;
 
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
