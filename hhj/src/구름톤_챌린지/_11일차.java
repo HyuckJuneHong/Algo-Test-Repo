@@ -20,7 +20,7 @@ import java.io.InputStreamReader;
  풀이
  1) 만약 둘 중 큰 값으로 나누어 떨어지면 끝
  */
-public class _11주차 {
+public class _11일차 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());

@@ -27,7 +27,7 @@ import java.util.List;
  2. 1을 만족하는 것이 여러개면 가장 작은 컴포넌트 출력
  3. 2를 만족하는 컴포넌트 여러개면 더 작은 컴퓨터가 있는 컴포넌트 출력
  */
-public class _17주차 {
+public class _17일차 {
 
 	static List<Integer> answer;
 	static List<List<Integer>> graph;

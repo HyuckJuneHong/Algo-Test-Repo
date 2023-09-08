@@ -23,7 +23,7 @@ import java.util.List;
  - S : 출발 도시 (1 ~ N)
  - E : 도착 도시 (1 ~ N)
  */
-public class _19차 {
+public class _19일차 {
 
 	static List<List<Integer>> graph = new ArrayList<>();
 	static List<Integer> answer = new ArrayList<>();

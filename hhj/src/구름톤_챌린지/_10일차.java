@@ -23,8 +23,8 @@ import java.io.InputStreamReader;
  1. 게임 시작
  2. 점수 확인
  */
-public class _10주차 {
-	
+public class _10일차 {
+
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());

@@ -23,7 +23,7 @@ import java.io.InputStreamReader;
  - d : 방향 (U, D, L, R)
 
  */
-public class _18주차 {
+public class _18일차 {
 
 	static long[][] h;
 	static long[][] v;

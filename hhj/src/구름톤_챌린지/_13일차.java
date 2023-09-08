@@ -32,7 +32,7 @@ import java.util.Map;
  3) 방문 유무 배열 선언
  4) bfs 탐색
  */
-public class _13주차 {
+public class _13일차 {
 	static final int[] DX = {-1, 0, 1, 0};
 	static final int[] DY = {0, 1, 0, -1};
 

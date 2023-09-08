@@ -21,7 +21,7 @@ import java.util.Deque;
  - N : 섬 개수(2~2_000)
  - M : 다리 개수(1~200_000)
  */
-public class _16주차 {
+public class _16일차 {
 	static int[][] graph;
 	static boolean[] visited;
 

@@ -26,7 +26,7 @@ import java.util.Deque;
  - 1이 없으면 패스
  - 반복문 끝나면 최소와 비교
  */
-public class _12주차 {
+public class _12일차 {
 
 	static final int[] DX = {-1, 0, 1, 0};
 	static final int[] DY = {0, 1, 0, -1};
