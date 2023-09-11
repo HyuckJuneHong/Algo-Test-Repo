@@ -45,7 +45,6 @@ public class 호텔_대실 {
 
 		public Time(String[] start, String[] end) {
 			this.sh = Integer.parseInt(start[0]);
-			;
 			this.sm = Integer.parseInt(start[1]);
 			this.eh = Integer.parseInt(end[0]);
 			this.em = Integer.parseInt(end[1]);
