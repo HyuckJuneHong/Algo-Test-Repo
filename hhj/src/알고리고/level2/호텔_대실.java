@@ -1,53 +1,38 @@
 package src.알고리고.level2;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class 호텔_대실 {
 
-	static int TIME = 24 * 60 + 10;
-	static int H = 60;
-	static int M = 10;
+    static final int H = 24;
+    static final int M = 60;
+    static final int A = 10;
 
-	public int solution(
-		String[][] book_time    // 예약 시간 [시작, 종료] ["HH:MM", "HH:MM"] 형태로 담김 (1~1_000)
-	) {
-		List<Time> list = new ArrayList<>();
-		int[] room = new int[TIME];
-		String[] start;
-		String[] end;
-		int answer = 0;
+    public int solution(String[][] book_time) {
+        int answer = 0;
+        int[] day = new int[H * M + A];
 
-		for (int i = 0; i < book_time.length; i++) {
-			start = book_time[i][0].split(":");
-			end = book_time[i][1].split(":");
-			list.add(new Time(start, end));
-		}
+        for (String[] book : book_time) {
+            int start = getTime(book[0]);
+            int end = getTime(book[1]) + A;
+            day[start] += 1;
+            day[end] -= 1;
+        }
 
-		for (Time t : list) {
-			room[t.sh * H + t.sm] += 1;
-			room[t.eh * H + t.em + M] -= 1;
-		}
+        for (int i = 1; i < day.length; i++) {
+            day[i] += day[i - 1];
 
-		for (int i = 1; i < TIME; i++) {
-			room[i] += room[i - 1];
-			answer = Math.max(answer, room[i]);
-		}
+            if (answer < day[i]) {
+                answer = day[i];
+            }
+        }
 
-		return answer;
-	}
+        return answer;
+    }
 
-	public static class Time {
-		int sh;
-		int sm;
-		int eh;
-		int em;
+    public int getTime(String time) {
+        String[] t = time.split(":");
+        int h = Integer.parseInt(t[0]) * M;
+        int m = Integer.parseInt(t[1]);
 
-		public Time(String[] start, String[] end) {
-			this.sh = Integer.parseInt(start[0]);
-			this.sm = Integer.parseInt(start[1]);
-			this.eh = Integer.parseInt(end[0]);
-			this.em = Integer.parseInt(end[1]);
-		}
-	}
+        return h + m;
+    }
 }
