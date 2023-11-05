@@ -5,7 +5,7 @@ package src.알고리고.문제_풀이_전략._2_문자열;
  2. 해당 길이의 문자로 압축 했을 때 길이 추출
  3. 추출한 길이가 최솟값이면 저장
  */
-public class lv2_문자열_압축 {
+public class Lv2_문자열_압축 {
 
 	public int solution(String s) {
 		int answer = s.length();

@@ -5,7 +5,7 @@ package src.알고리고.문제_풀이_전략._2_문자열;
  1. 이진 변환을 하는 메서드 생성
  2. 해당 메서드를 s가 "1"이 될 때까지 반복
  */
-public class lv2_이진_변환_반복하기 {
+public class Lv2_이진_변환_반복하기 {
 
 	static int zeroCount = 0;
 	static int convertCount = 0;
