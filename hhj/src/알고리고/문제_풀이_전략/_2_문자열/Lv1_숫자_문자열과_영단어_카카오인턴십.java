@@ -3,7 +3,7 @@ package src.알고리고.문제_풀이_전략._2_문자열;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Lv1_숫자_문자열과_영단어 {
+public class Lv1_숫자_문자열과_영단어_카카오인턴십 {
 
 	static Map<String, String> map = new HashMap<>();
 

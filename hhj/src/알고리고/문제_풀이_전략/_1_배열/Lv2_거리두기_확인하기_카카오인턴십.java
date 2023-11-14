@@ -11,7 +11,7 @@ package src.알고리고.문제_풀이_전략._1_배열;
     - X이면 continue
 3. 모두 통과 시, return 1
 */
-public class Lv2_거리두기 {
+public class Lv2_거리두기_확인하기_카카오인턴십 {
 
 	private final int[] dx = {-1, 0, 1, 0};
 	private final int[] dy = {0, 1, 0, -1};

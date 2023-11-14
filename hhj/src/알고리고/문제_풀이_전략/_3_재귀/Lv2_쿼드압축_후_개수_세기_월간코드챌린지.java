@@ -1,6 +1,6 @@
 package src.알고리고.문제_풀이_전략._3_재귀;
 
-public class Lv2_쿼드압축_후_개수_세기 {
+public class Lv2_쿼드압축_후_개수_세기_월간코드챌린지 {
 
 	static int one = 0;
 	static int zero = 0;

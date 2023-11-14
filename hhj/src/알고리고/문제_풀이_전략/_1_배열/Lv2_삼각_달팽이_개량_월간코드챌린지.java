@@ -8,7 +8,7 @@ package src.알고리고.문제_풀이_전략._1_배열;
  * 4. 이따 방향 전환은 더 이상 진행할 수 없을 때 진행
  * 5. 방향 전환 후에도 더 이상 진행할 수 없다면 종료
  */
-public class Lv2_삼각_달팽이_개량 {
+public class Lv2_삼각_달팽이_개량_월간코드챌린지 {
 
 	private static final int[] dx = {0, 1, -1};
 	private static final int[] dy = {1, 0, -1};

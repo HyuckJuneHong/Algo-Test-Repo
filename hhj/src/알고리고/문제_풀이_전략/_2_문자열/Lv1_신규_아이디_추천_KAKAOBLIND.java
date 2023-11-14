@@ -1,6 +1,6 @@
 package src.알고리고.문제_풀이_전략._2_문자열;
 
-public class Lv1_신규_아이디_추천 {
+public class Lv1_신규_아이디_추천_KAKAOBLIND {
 
 	public String solution(String new_id) {
 		new_id = new_id.toLowerCase(); // 1

@@ -10,7 +10,7 @@ import java.util.List;
 2. 정수값 중 최댓 x, y 위치와 최소 x, y를 구한다.
 3. 구한 값으로 배열을 생성 후 별을 넣는다.
 */
-public class Lv2_교점에_별_만들기 {
+public class Lv2_교점에_별_만들기_위클리챌린지 {
 
 	private static class Point {
 
