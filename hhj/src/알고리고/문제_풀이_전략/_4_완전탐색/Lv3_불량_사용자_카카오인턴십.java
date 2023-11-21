@@ -14,7 +14,7 @@ import java.util.Set;
  - 각 밴 사용자에 대응하는 경우들을 Set에 넣는다.
  - depth를 증가하며 ban 길이와 같아지면, 종료한다.
  */
-public class Lv3_불량_사용자 {
+public class Lv3_불량_사용자_카카오인턴십 {
 
 	static Set<Set<String>> answer = new HashSet<>();
 
