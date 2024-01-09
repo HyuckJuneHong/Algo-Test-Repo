@@ -1,4 +1,4 @@
-package src.알고리고.문제_풀이_전략._9_큐;
+package src.알고리고.문제_풀이_전략._9_힙;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -13,7 +13,7 @@ import java.util.Queue;
  1. PriorityQueue를 활용해 operations의 명령어들을 수행한다.
  2. 이때, 최대, 최소를 알기 위해 PriorityQueue 필드를 2개 선언한다.
  */
-public class Lv3_우선순위_큐_Heap {
+public class Lv3_우선순위_큐 {
 
 	public int[] solution(String[] operations) {
 		Queue<Integer> pq = new PriorityQueue<>();
