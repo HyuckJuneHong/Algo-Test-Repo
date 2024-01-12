@@ -1,4 +1,4 @@
-package src.알고리고.문제_풀이_전략._9_힙;
+package src.알고리고.문제_풀이_전략._9_힙_우선순위큐;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

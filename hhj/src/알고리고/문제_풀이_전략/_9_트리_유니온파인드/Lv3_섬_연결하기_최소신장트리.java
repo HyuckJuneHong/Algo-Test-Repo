@@ -1,4 +1,4 @@
-package src.알고리고.문제_풀이_전략._9_그리디;
+package src.알고리고.문제_풀이_전략._9_트리_유니온파인드;
 
 import java.util.Arrays;
 import java.util.List;
