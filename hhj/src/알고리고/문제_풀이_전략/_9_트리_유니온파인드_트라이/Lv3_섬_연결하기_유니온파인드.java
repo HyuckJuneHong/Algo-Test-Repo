@@ -1,4 +1,4 @@
-package src.알고리고.문제_풀이_전략._9_트리_유니온파인드;
+package src.알고리고.문제_풀이_전략._9_트리_유니온파인드_트라이;
 
 import java.util.Arrays;
 
@@ -52,11 +52,9 @@ public class Lv3_섬_연결하기_유니온파인드 {
 		a = find(a);
 		b = find(b);
 
-		if (a == b) {
-			return;
-		} else if (a < b) {
+		if (a < b) {
 			parent[b] = a;
-		} else {
+		} else if (a > b) {
 			parent[a] = b;
 		}
 	}
