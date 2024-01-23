@@ -14,7 +14,7 @@ import java.util.Set;
  3. reserve 기준 앞뒤번호가 lostSet에 있으면 lost 제거
  4. n - lost.size 반환
  */
-public class LV1_체육복 {
+public class LV1_체육복_그리디 {
 
 	public int solution(int n, int[] lost, int[] reserve) {
 		Set<Integer> lostSet = new HashSet<>();
