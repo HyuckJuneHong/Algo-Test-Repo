@@ -33,18 +33,19 @@ public class Lv2_괄호_회전하기_월간코드챌린지 {
 		Deque<Character> stack = new ArrayDeque<>();
 
 		for (char c : s.toCharArray()) {
-			switch (c) {
-				case '(' -> stack.push(')');
-				case '{' -> stack.push('}');
-				case '[' -> stack.push(']');
-				case ')', '}', ']' -> {
-					if (stack.isEmpty()) {
-						return false;
-					}
+			if (c == '(') {
+				stack.push(')');
+			} else if (c == '{') {
+				stack.push('}');
+			} else if (c == '[') {
+				stack.push(']');
+			} else if (c == ')' || c == '}' || c == ']') {
+				if (stack.isEmpty()) {
+					return false;
+				}
 
-					if (stack.pop() != c) {
-						return false;
-					}
+				if (stack.pop() != c) {
+					return false;
 				}
 			}
 		}
