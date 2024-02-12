@@ -7,7 +7,7 @@ import java.io.OutputStreamWriter;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class G5_토마토 {
+public class G5_7569_토마토 {
 
 	static Queue<Point> queue = new LinkedList<>();
 	static int[][][] distance;
