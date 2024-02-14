@@ -1,4 +1,4 @@
-package src.알고리고.문제_풀이_전략._10_구현;
+package src.알고리고.문제_풀이_전략._10_구현_그리디;
 
 import java.util.HashSet;
 import java.util.Set;

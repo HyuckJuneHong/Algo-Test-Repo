@@ -1,4 +1,4 @@
-package src.알고리고.문제_풀이_전략._10_구현;
+package src.알고리고.문제_풀이_전략._10_구현_그리디;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -18,29 +18,26 @@ public class Lv2_큰_수_만들기_그리디 {
 		StringBuilder answer = new StringBuilder();
 		Deque<Integer> stack = new ArrayDeque<>();
 
-		for (char num : number.toCharArray()) {
-			if (stack.isEmpty()) {
-				stack.push(num - '0');
-				continue;
-			}
+		for (char val : number.toCharArray()) {
+			int num = Integer.parseInt(val + "");
 
-			while (!stack.isEmpty() && stack.peek() < (num - '0') && k > 0) {
+			while (!stack.isEmpty() && stack.peek() < num && k > 0) {
 				stack.pop();
 				k--;
 			}
 
-			stack.push(num - '0');
+			stack.push(num);
 		}
 
 		while (!stack.isEmpty()) {
-			int current = stack.pop();
+			int num = stack.pop();
 
 			if (k > 0) {
 				k--;
 				continue;
 			}
 
-			answer.append(current);
+			answer.append(num);
 		}
 
 		return answer.reverse()
