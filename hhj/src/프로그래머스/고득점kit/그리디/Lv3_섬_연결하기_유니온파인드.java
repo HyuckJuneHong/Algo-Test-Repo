@@ -21,8 +21,7 @@ public class Lv3_섬_연결하기_유니온파인드 {
 			int a = cost[0];
 			int b = cost[1];
 
-			if (find(a) != find(b)) {
-				union(a, b);
+			if (union(a, b)) {
 				answer += cost[2];
 			}
 		}
@@ -30,18 +29,21 @@ public class Lv3_섬_연결하기_유니온파인드 {
 		return answer;
 	}
 
-	private static void union(int node1, int node2) {
+	private static boolean union(int node1, int node2) {
 		int n1 = find(node1);
 		int n2 = find(node2);
 
-		if (n1 > n2) {
-			parent[n2] = n1;
-			return;
+		if (n1 == n2) {
+			return false;
 		}
 
-		if (n1 < n2) {
+		if (n1 > n2) {
+			parent[n2] = n1;
+		} else {
 			parent[n1] = n2;
 		}
+
+		return true;
 	}
 
 	private static int find(int node) {
