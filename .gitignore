@@ -6,8 +6,9 @@
 *.iml
 out
 gen
-/hhj/src/toss/
-/hhj/src/gabia/
-/hhj/src/nexon/
-/hhj/src/kakao/
-/hhj/src/stclab/
+/hhj/src/secret/
+/hhj/src/secret/toss/
+/hhj/src/secret/gabia/
+/hhj/src/secret/nexon/
+/hhj/src/secret/kakao/
+/hhj/src/secret/stclab/
