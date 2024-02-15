@@ -7,7 +7,7 @@ n : 섬의 개수 (1~100)
 costs[][] : 섬 사이에 다리를 건설하는 비용 (len=(n-1)*n/2 이하, val[i]={섬1, 섬2, 비용})
 return int : 최소 비용으로 모든 섬이 서로 통행 가능하도록 만들 때 필요한 최소 비용
 */
-public class Lv3_섬_연결하기 {
+public class Lv3_섬_연결하기_유니온파인드 {
 
 	static int[] parent;
 
