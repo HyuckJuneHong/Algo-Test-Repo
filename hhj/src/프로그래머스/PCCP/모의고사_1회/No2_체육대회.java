@@ -1,6 +1,6 @@
-package src.프로그래머스.PCCP;
+package src.프로그래머스.PCCP.모의고사_1회;
 
-public class 모의고사1_2번 {
+public class No2_체육대회 {
 	/**
 	 - 각 반의 해당 종목 대표가 1명씩 나와 대결
 	 - 한 학생은 최대 1개의 종목 대표만 할 수 있음

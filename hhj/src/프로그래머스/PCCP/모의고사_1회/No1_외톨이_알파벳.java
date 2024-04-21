@@ -1,4 +1,4 @@
-package src.프로그래머스.PCCP;
+package src.프로그래머스.PCCP.모의고사_1회;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class 모의고사1_1번 {
+public class No1_외톨이_알파벳 {
 	public String solution(String input_string) {
 		// 1단계: 문자열 압축
 		List<Character> compression = compressString(input_string);
